@@ -1,0 +1,1 @@
+// will add the form validation and hover effects here, maybe the image border effect? at least two per page is asked
