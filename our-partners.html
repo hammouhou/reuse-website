@@ -11,39 +11,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="cs/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="container mt-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center">
+    <header class="site-header">
+        <div class="container">
             <a href="home-page.html">
-                <img src="images/logo.png" alt="Reuse Logo" style="height: 50px;">
+                <img src="images/logo.png" alt="Reuse Logo" class="logo-image">
             </a>
-            <nav>
-                <a href="our-partners.html" class="p-2 text-decoration-none">Our Partners</a>
-                <a href="schedule-pickup.html" class="p-2 text-decoration-none">Schedule a pick up</a>
+            <nav class="main-navigation">
+                <a href="our-partners.html" class="navigation-link">Our Partners</a>
+                <a href="schedule-pickup.html" class="navigation-link">Schedule a pick up</a>
             </nav>
         </div>
     </header>
-    <footer class="container-fluid mt-5 pt-5 pb-3" style="background-color: #e9e4db;">
+    <main class="container main-section">
+        <p class="breadcrumb-navigation">Home > Partners</p>
+        <h2 class="section-title">Our Partners</h2>
+
+        <div class="row partner-listing">
+            <div class="col-md-4">
+                <img src="images/Oxfam-Ireland-Image-Storefront-logo.jpg" alt="Oxfam storefront" class="partner-image">
+            </div>
+            <div class="col-md-8">
+                <h3><a href="https://www.oxfamireland.org/" class="partner-name-link">Oxfam</a></h3>
+                <p>Oxfam Ireland is a nonprofit organization that works to fight global poverty and injustice. They run development programs, respond to humanitarian crises, and advocate for policy change.
+                <p><strong>Charity Regulatory Authority number:</strong> 20009946</p>
+            </div>
+        </div>
+
+        <div class="row partner-listing">
+            <div class="col-md-4">
+                <img src="images/Enable-Ireland-Bray-Storefront-Logo.jpg" alt="enable ireland" class="partner-image">
+            </div>
+            <div class="col-md-8">
+                <h3><a href="https://enableireland.ie/" class="partner-name-link">Enable Ireland</a></h3>
+                <p>Enable Ireland provides therapeutic, clinical and early intervention services for children and adults with disabilities and their families across Ireland.</p>
+                <p><strong>Charity Regulatory Authority number:</strong> 20006617</p>
+            </div>
+        </div>
+
+        <div class="row partner-listing">
+            <div class="col-md-4">
+                <img src="images/Irish-Cancer-Society-Storefront-Logo.jpg" alt="Irish Cancer Society storefront" class="partner-image">
+            </div>
+            <div class="col-md-8">
+                <h3><a href="https://www.cancer.ie/" class="partner-name-link">Irish Cancer Society</a></h3>
+                <p>Supports people affected by cancer through research funding, patient information and support services, advocacy, and public awareness campaigns.</p>
+                <p><strong>Charity Regulatory Authority number:</strong> 20009502</p>
+            </div>
+        </div>
+
+        <div class="row partner-listing">
+            <div class="col-md-4">
+                <img src="images/Svp-The-Society-of-St-Vincent-de-Paul-Ireland-Storefront-Logo.jpg" alt="SVP storefront" class="partner-image">
+            </div>
+            <div class="col-md-8">
+                <h3><a href="https://www.svp.ie/" class="partner-name-link">SVP</a></h3>
+                <p>Society of St. Vincent de Paul (SVP) is Ireland's largest voluntary charitable organization, providing practical assistance to individuals and families experiencing poverty.</p>
+                <p><strong>Charity Regulatory Authority number:</strong> 20013806</p>
+            </div>
+        </div>
+
+        <div class="centered-content">
+            <a href="partner-signup.html" class="button-primary">Sign up as a partner</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="images/logo.png" alt="Reuse Logo" style="height: 40px;" class="mb-2">
+                <div class="col-md-4 footer-column">
+                    <img src="images/logo.png" alt="Reuse Logo" class="footer-logo">
                     <p><strong>Address:</strong><br>Mayor Street Lower, IFSC<br>Dublin 1, Ireland</p>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Social</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="instgram.com/reuse">Instagram</a></li>
                         <li><a href="facebook.com/reuse">Facebook</a></li>
                         <li><a href="linkedin.com/reuse">Linkedin</a></li>
                         <li><a href="x.com/reuse">Twitter/X</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Site Map</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="about-us.html">About us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                         <li><a href="our-partners.html">Our Partners</a></li>
@@ -52,7 +105,7 @@
                 </div>
             </div>
             <hr>
-            <div class="text-center">
+            <div class="footer-copyright">
                 <p>&copy; 2025. All rights reserved.</p>
             </div>
         </div>

@@ -14,65 +14,67 @@
     <link rel="stylesheet" href="cs/styles.css">
 </head>
 <body>
-    <header class="container mt-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center">
+
+    <header class="site-header">
+        <div class="container">
             <a href="home-page.html">
-                <img src="images/logo.png" alt="Reuse Logo" style="height: 50px;">
+                <img src="images/logo.png" alt="Reuse Logo" class="logo-image">
             </a>
-            <nav>
-                <a href="our-partners.html" class="p-2 text-decoration-none">Our Partners</a>
-                <a href="schedule-pickup.html" class="p-2 text-decoration-none">Schedule a pick up</a>
+            <nav class="main-navigation">
+                <a href="our-partners.html" class="navigation-link">Our Partners</a>
+                <a href="schedule-pickup.html" class="navigation-link">Schedule a pick up</a>
             </nav>
         </div>
     </header>
     <main>
-        <div class="container-fluid text-center text-white py-5" style="background-color: #6c757d;">
-             <h1 class="display-4">Turn unused house items into smiles</h1>
-            <p class="lead">Look around your home—are all your items still bringing you joy? With just a click, you can pass them on through a trusted charity, creating space in your home while spreading joy to others.</p>
-            <div class="btn mt-3" style="background-color: #3B9AE1; color: white;">Schudle a pick up today!</div>
+        <div class="hero-section">
+             <h1>Turn unused house items into smiles</h1>
+            <p>Look around your home—are all your items still bringing you joy? With just a click, you can pass them on through a trusted charity, creating space in your home while spreading joy to others.</p>
+            <div class="button-primary">Schudle a pick up today!</div>
         </div>
 
-        <div class="container my-5">
-            <h2 class="text-center mb-4">Drop off locations near you</h2>
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <img src="images/Dublin-Center-Map.jpg" alt="Map of Center North drop off location" class="img-fluid">
+        <div class="container main-section">
+            <h2 class="section-title">Drop off locations near you</h2>
+            <div class="row">
+                <div class="col-md-3 location-item">
+                    <img src="images/Dublin-Center-Map.jpg" alt="Map of Center North drop off location" class="location-image">
                     <h4>Center North</h4>
                 </div>
-                <div class="col-md-3">
-                    <img src="images/North-Dublin-Map.jpg" alt="Map of Dublin North drop off location" class="img-fluid">
+                <div class="col-md-3 location-item">
+                    <img src="images/North-Dublin-Map.jpg" alt="Map of Dublin North drop off location" class="location-image">
                     <h4>Dublin North</h4>
                 </div>
-                <div class="col-md-3">
-                    <img src="images/South-Dublin-Map.jpg" alt="Map of South North drop off location" class="img-fluid">
+                <div class="col-md-3 location-item">
+                    <img src="images/South-Dublin-Map.jpg" alt="Map of South North drop off location" class="location-image">
                     <h4>South North</h4>
                 </div>
-                <div class="col-md-3">
-                    <img src="images/Lucan-Map.jpg" alt="Map of Lucan drop off location" class="img-fluid">
+                <div class="col-md-3 location-item">
+                    <img src="images/Lucan-Map.jpg" alt="Map of Lucan drop off location" class="location-image">
                     <h4>Lucan</h4>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="container-fluid mt-5 pt-5 pb-3" style="background-color: #e9e4db;">
+
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="images/logo.png" alt="Reuse Logo" style="height: 40px;" class="mb-2">
+                <div class="col-md-4 footer-column">
+                    <img src="images/logo.png" alt="Reuse Logo" class="footer-logo">
                     <p><strong>Address:</strong><br>Mayor Street Lower, IFSC<br>Dublin 1, Ireland</p>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Social</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="instgram.com/reuse">Instagram</a></li>
                         <li><a href="facebook.com/reuse">Facebook</a></li>
                         <li><a href="linkedin.com/reuse">Linkedin</a></li>
                         <li><a href="x.com/reuse">Twitter/X</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Site Map</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="about-us.html">About us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                         <li><a href="our-partners.html">Our Partners</a></li>
@@ -81,7 +83,7 @@
                 </div>
             </div>
             <hr>
-            <div class="text-center">
+            <div class="footer-copyright">
                 <p>&copy; 2025. All rights reserved.</p>
             </div>
         </div>

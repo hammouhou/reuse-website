@@ -11,39 +11,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="cs/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="container mt-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center">
+    <header class="site-header">
+        <div class="container">
             <a href="home-page.html">
-                <img src="images/logo.png" alt="Reuse Logo" style="height: 50px;">
+                <img src="images/logo.png" alt="Reuse Logo" class="logo-image">
             </a>
-            <nav>
-                <a href="our-partners.html" class="p-2 text-decoration-none">Our Partners</a>
-                <a href="schedule-pickup.html" class="p-2 text-decoration-none">Schedule a pick up</a>
+            <nav class="main-navigation">
+                <a href="our-partners.html" class="navigation-link">Our Partners</a>
+                <a href="schedule-pickup.html" class="navigation-link">Schedule a pick up</a>
             </nav>
         </div>
     </header>
-    <footer class="container-fluid mt-5 pt-5 pb-3" style="background-color: #e9e4db;">
+    <main class="container main-section">
+        <p class="breadcrumb-navigation">Home > About us</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>What is reuse?</h2>
+                <p>Reuse is a nonprofit platform that helps people give away everyday items—like clothes, furniture, books, and electronics—to charity. It serves as a one-stop donation point, collecting goods on behalf of trusted partner charities.</p>
+                <p>By making donating used items more accessible, it reduces waste, supports environmental sustainability, and ensures donated items reach the communities that need them most.</p>
+                <p><strong>Charity Regulatory Authority number:</strong> (pending)</p>
+                <a href="contact-us.html" class="button-secondary">Contact us</a>
+            </div>
+            <div class="col-md-6">
+                <img src="images/About Us-Donation-Storage-Smiling-Man-Image.jpg" alt="A volunteer smiling in a tidy donation storage area" class="content-image">
+            </div>
+        </div>
+
+        <h2 class="section-title">Our team</h2>
+        <div class="row" id="team-container">
+            </div>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="images/logo.png" alt="Reuse Logo" style="height: 40px;" class="mb-2">
+                <div class="col-md-4 footer-column">
+                    <img src="images/logo.png" alt="Reuse Logo" class="footer-logo">
                     <p><strong>Address:</strong><br>Mayor Street Lower, IFSC<br>Dublin 1, Ireland</p>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Social</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="instgram.com/reuse">Instagram</a></li>
                         <li><a href="facebook.com/reuse">Facebook</a></li>
                         <li><a href="linkedin.com/reuse">Linkedin</a></li>
                         <li><a href="x.com/reuse">Twitter/X</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 footer-column">
                     <h5>Site Map</h5>
-                    <ul class="list-unstyled">
+                    <ul class="footer-links-list">
                         <li><a href="about-us.html">About us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                         <li><a href="our-partners.html">Our Partners</a></li>
@@ -52,7 +72,7 @@
                 </div>
             </div>
             <hr>
-            <div class="text-center">
+            <div class="footer-copyright">
                 <p>&copy; 2025. All rights reserved.</p>
             </div>
         </div>
