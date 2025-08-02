@@ -40,10 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // array implementation: this is super extra but there is no other place to put dynamic array as requested
-    // this dynamically create the our team section from an array
-    
-    // an array to hold all the team member info
+    // array implementation: this dynamically creates the our team section from an array
     const teamMembers = [
         {
             name: "Hammou Houdjedje",
@@ -62,15 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // find the div where we want to put the team members
     const teamContainer = document.getElementById('team-container');
 
-
-    // we only want to run this code if we are on the about us page (where the container exists)
     if (teamContainer) {
-        let teamHTML = ''; // Start with an empty string
-        
-        // loop through the array and build the HTML for each member
+        let teamHTML = '';
         for (let i = 0; i < teamMembers.length; i++) {
             teamHTML = teamHTML + `
                 <div class="col-md-4 team-member">
@@ -80,67 +72,69 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         }
-        // put the finished html into the container on the page
         teamContainer.innerHTML = teamHTML;
     }
 
+    // --- Unified Form Validation Function ---
+    // This one function will handle all our forms!
+    function validateForm(formId, requiredFields) {
+        const form = document.getElementById(formId);
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // always stop the form from submitting
 
-    // this is the validation required by the project (for Schedule a Pick Up page)
-    const pickupForm = document.getElementById('pickup-form');
-    if (pickupForm) {
-        pickupForm.addEventListener('submit', function(event) {
-            // this stops the form from trying to submit to a server
-            event.preventDefault();
+                // loop through the fields we need to check
+                for (let i = 0; i < requiredFields.length; i++) {
+                    const fieldId = requiredFields[i];
+                    const inputField = document.getElementById(fieldId);
+                    const fieldValue = inputField.value.trim();
 
-            // get the values from the form fields
-            const fullName = document.getElementById('fullName').value;
-            const description = document.getElementById('description').value;
-            const estimatedValue = document.getElementById('value').value;
+                    // 1. Check if the field is empty
+                    if (fieldValue === '') {
+                        alert('Please fill out all required fields.');
+                        return; // Stop the function
+                    }
+                    
+                    // 2. NEW: Check for a valid email format
+                    // if the id of the input contains the word 'Email', we check it
+                    if (fieldId.toLowerCase().includes('email')) {
+                        // this is a simple pattern to check for something@something.something
+                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailPattern.test(fieldValue)) {
+                            alert('Please enter a valid email address.');
+                            return; // Stop the function
+                        }
+                    }
 
-            // check if important fields are empty
-            if (fullName === '' || description === '') {
-                alert('Please fill out your name and a description of the donation.');
-                return; // Stop the function
-            }
+                    // 3. NEW: Check for a valid phone number format
+                    // if the id of the input is 'contactPhone', we check it
+                    if (fieldId === 'contactPhone') {
+                        // this checks if the value is not a number or is less than 7 digits
+                        if (isNaN(fieldValue) || fieldValue.length < 7) {
+                           alert('Please enter a valid phone number with at least 7 digits.');
+                           return; // Stop the function
+                        }
+                    }
+                }
 
-            // check if the estimated value is a number, this might be used in the future to implement an auto caculator of pick up worthy donations
-            if (isNaN(estimatedValue) || estimatedValue === '') {
-                alert('Please enter a valid number for the estimated value.');
-                return; // Stop the function
-            }
-
-            // if everything is okay, show a success message
-            alert('Thank you! Your pickup request has been submitted.');
-            pickupForm.reset(); // this clears the form after it's sent
-        });
+                // if all checks pass, show the success message
+                alert('Thank you! Your form has been submitted.');
+                form.reset(); // clear the form
+            });
+        }
     }
 
-    // Validation for the Partner Sign Up page
-    const partnerForm = document.getElementById('partner-form');
-    if (partnerForm) {
-        partnerForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // prevent the form from submitting
+    // --- Using the Unified Function for Each Form ---
+    // Now we just call our function for each form on the site.
+    
+    // 1. Validate the Schedule a Pick Up form
+    validateForm('pickup-form', ['fullName', 'email', 'description', 'value']);
 
-            const fullName = document.getElementById('fullName').value.trim();
-            const businessEmail = document.getElementById('businessEmail').value.trim();
-            const organizationName = document.getElementById('organizationName').value.trim();
-            
-            // a simple regex for email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // 2. Validate the Partner Sign Up form
+    validateForm('partner-form', ['fullName', 'businessEmail', 'organizationName']);
 
-            if (fullName === '' || businessEmail === '' || organizationName === '') {
-                alert('Please fill out all required fields: Full Name, Business Email, and Organization Name.');
-                return;
-            }
+    // 3. Validate the Contact Us form
+    validateForm('contact-form', ['contactName', 'contactEmail', 'contactPhone', 'contactMessage']);
 
-            if (!emailRegex.test(businessEmail)) {
-                alert('Please enter a valid business email address.');
-                return;
-            }
 
-            // If all checks pass, show a success message
-            alert('Thank you! Your partner sign-up request has been submitted.');
-            partnerForm.reset(); // clear the form
-        });
-    }
 });
