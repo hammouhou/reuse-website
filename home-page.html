@@ -5,59 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reuse - Home</title>
 
-    // Bootstrap CSS for the grid
+    <!-- Bootstrap CSS for the grid-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    // Google Fonts
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    // fixed typo
+    <!-- fixed typo-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="container">
-            // Logo on the left
-            <a href="home-page.html">
-                <img src="images/logo.png" alt="Hmm, the image seem to be missing, imagin it" class="logo-image">
-            </a>
-            // Navigation Links on the right
-            <nav class="main-navigation">
+        <div class="container site-header-container">
+            <nav class="header-nav-left">
                 <a href="our-partners.html" class="navigation-link">Our Partners</a>
+            </nav>
+            <div class="header-logo-center">
+                <a href="home-page.html">
+                    <img src="images/logo.png" alt="Hmm, the image seem to be missing, imagin it" class="logo-image">
+                </a>
+            </div>
+            <nav class="header-nav-right">
                 <a href="schedule-pickup.html" class="navigation-link">Schedule a pick up</a>
             </nav>
         </div>
     </header>
 
     <main>
-        // First Section
-        <div class="hero-section">
-            <h1>Turn unused house items into smiles</h1>
-            <p>Look around your home—are all your items still bringing you joy? With just a click, you can pass them on through a trusted charity, creating space in your home while spreading joy to others.</p>
-            <div class="button-primary">Schudle a pick up today!</div>
+        <div class="container main-section">
+            <div class="row home-hero-row">
+                <div class="col-md-6">
+                    <h1>Turn unused house items into smiles</h1>
+                    <p>Look around your home—are all your items still bringing you joy? With just a click, you can pass them on through a trusted charity, creating space in your home while spreading joy to others.</p>
+                    <a href="schedule-pickup.html" class="button-primary">Schudle a pick up today!</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/Home-Page-Hero-Smiling-Delivery-Man-Image.jpg" alt="Hmm, the image seem to be missing, imagin it" class="content-image">
+                </div>
+            </div>
         </div>
 
-        // Drop off Locations Section
         <div class="container main-section">
             <h2 class="section-title">Drop off locations near you</h2>
             <div class="row">
                 <div class="col-md-3 location-item">
-                    <img src="images/Dublin-Center-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    <a href="https://maps.app.goo.gl/vaEe2g6RSNNYDE8A6" target="_blank">
+                        <img src="images/Dublin-Center-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    </a>
                     <h4>Center North</h4>
                 </div>
                 <div class="col-md-3 location-item">
-                    <img src="images/North-Dublin-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    <a href="https://maps.app.goo.gl/ZgQTq8PSUkRVRKgN7" target="_blank">
+                        <img src="images/North-Dublin-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    </a>
                     <h4>Dublin North</h4>
                 </div>
                 <div class="col-md-3 location-item">
-                    <img src="images/South-Dublin-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    <a href="https://maps.app.goo.gl/9FL94izgV8iSHtEb9" target="_blank">
+                        <img src="images/South-Dublin-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    </a>
                     <h4>South North</h4>
                 </div>
                 <div class="col-md-3 location-item">
-                    <img src="images/Lucan-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    <a href="https://maps.app.goo.gl/taan5uwNEHrsrT256" target="_blank">
+                        <img src="images/Lucan-Map.jpg" alt="Hmm, the image seem to be missing, imagin it" class="location-image">
+                    </a>
                     <h4>Lucan</h4>
                 </div>
             </div>
@@ -67,23 +82,23 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-                // Column 1: Logo and Address
+                <!-- Column 1: Logo and Address-->
                 <div class="col-md-4 footer-column">
                     <img src="images/logo.png" alt="Hmm, the image seem to be missing, imagin it" class="footer-logo">
                     <p><strong>Address:</strong><br>Mayor Street Lower, IFSC<br>Dublin 1, Ireland</p>
                 </div>
-                // Column 2: Social Links
+                <!-- Column 2: Social Links-->
                 <div class="col-md-4 footer-column">
                     <h5>Social</h5>
                     <ul class="footer-links-list">
-                        // hmm i think these links might be broken, ill check them later
+                        <!-- hmm i think these links might be broken, ill check them later-->
                         <li><a href="https://instgram.com/reuse">Instagram</a></li>
                         <li><a href="https://facebook.com/reuse">Facebook</a></li>
                         <li><a href="https://linkedin.com/reuse">Linkedin</a></li>
                         <li><a href="https://x.com/reuse">Twitter/X</a></li>
                     </ul>
                 </div>
-                // Column 3: Sitemap
+                <!-- Column 3: Sitemap-->
                 <div class="col-md-4 footer-column">
                     <h5>Site Map</h5>
                     <ul class="footer-links-list">
@@ -101,9 +116,9 @@
         </div>
     </footer>
 
-    // Bootstrap JS
+    <!-- Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    // Custom JS
+    <!-- Custom JS-->
     <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// will add the form validation and hover effects here, maybe the image border effect? at least two per page is asked// this makes sure the html is fully loaded before we try to mess with it
+// this makes sure the html is fully loaded before we try to mess with it
 document.addEventListener('DOMContentLoaded', function() {
 
     //  1st DOM manipulation : button hover effect 
@@ -48,22 +48,23 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: "Hammou Houdjedje",
             title: "Volunteer",
-            image: "images/About Us-Team-Member-Hammou.png"
+            image: "images/About-Us-Team-Member-Hammou.png"
         },
         {
             name: "Victor Carvalho",
             title: "Volunteer",
-            image: "images/About Us-Team-Member-Victor.png"
+            image: "images/About-Us-Team-Member-Victor.png"
         },
         {
             name: "Roisin Casey",
             title: "Volunteer",
-            image: "images/About Us-Team-Member-Roisin.png"
+            image: "images/About-Us-Team-Member-Roisin.png"
         }
     ];
 
     // find the div where we want to put the team members
     const teamContainer = document.getElementById('team-container');
+
 
     // we only want to run this code if we are on the about us page (where the container exists)
     if (teamContainer) {
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < teamMembers.length; i++) {
             teamHTML = teamHTML + `
                 <div class="col-md-4 team-member">
-                    <img src="${teamMembers[i].image}" alt="Hmm, the image seem to be missing, imagin it">
+                    <img src="${teamMembers[i].image}" alt="Team member ${teamMembers[i].name}">
                     <h4>${teamMembers[i].name}</h4>
                     <p>${teamMembers[i].title}</p>
                 </div>
@@ -113,3 +114,4 @@ document.addEventListener('DOMContentLoaded', function() {
             pickupForm.reset(); // this clears the form after it's sent
         });
     }
+});

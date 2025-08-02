@@ -1,29 +1,27 @@
 
-/* Stylesheet for the Reuse Project
-/* google fonts and colors go here 
- lets get those cool fonts from google */
+/* lets get those cool fonts from google */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap');
 
-/* these are  shortcuts for my colors from the mood board */
+/* These are the color and font variables */
 :root {
     --background-color: #F5F1EB;
     --primary-green-color: #4CAF50;
     --text-color: #333333;
     --button-blue-color: #3B9AE1;
-    --playpen-sans-font: 'Playpen Sans', cursive; // fixed the spelling of the font!
+    --playpen-sans-font: 'Playpen Sans', cursive;
     --nanum-pen-script-font: 'Nanum Pen Script', cursive;
 }
 
-/* this will apply to the whole page */
+/* Global styles for the whole page */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--playpen-sans-font);
-    font-weight: 400; // this is for regular paragraph text
+    font-weight: 400; /* Regular weight for paragraph text */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600; // this is for bold headings
+    font-weight: 600; /* Bold weight for headings */
 }
 
 a {
@@ -31,13 +29,28 @@ a {
     text-decoration: none;
 }
 
-// Style for the header section
-.site-header .container {
+/* Header Section */
+.site-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.header-nav-left {
+    flex: 1;
+    text-align: right;
+}
+
+.header-logo-center {
+    flex: 1;
+    text-align: center;
+}
+
+.header-nav-right {
+    flex: 1;
+    text-align: left;
 }
 
 .logo-image {
@@ -47,25 +60,21 @@ a {
 .navigation-link {
     font-weight: 600;
     padding: 0.5rem 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
 }
 
-// Styling the big hero section on the homepage
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Home-Page-Hero-Smiling-Delivery-Man-Image.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 1rem;
-    text-align: center;
-    color: white;
+/* Home Page Hero Section */
+.home-hero-row {
+    align-items: center; /* Vertically centers the text and image */
 }
 
-.hero-section h1 {
+.home-hero-row h1 {
     font-family: var(--nanum-pen-script-font);
     font-size: 4rem;
 }
 
-// General page and section styling
+/* General Page and Section Styling */
 .main-section {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -83,9 +92,19 @@ a {
 
 .content-image {
     width: 100%;
+    border-radius: 5px;
 }
 
-// Style for our buttons
+.location-item {
+    text-align: center; /* Centers the h4 under the map image */
+}
+
+.location-image {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
 .button-primary, .button-secondary {
     display: inline-block;
     color: white;
@@ -95,6 +114,7 @@ a {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .button-primary {
@@ -105,10 +125,16 @@ a {
     background-color: var(--primary-green-color);
 }
 
-// Styling for the our partners page
+/* "Our Partners" Page */
 .partner-listing {
     margin-bottom: 3rem;
     align-items: center;
+}
+
+.partner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .partner-name-link {
@@ -119,7 +145,22 @@ a {
     text-align: center;
 }
 
-// Styling the footer
+/* About Us Page - Team Section */
+.team-member {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+
+/* Footer Section */
 .site-footer {
     padding-top: 3rem;
     padding-bottom: 1rem;
@@ -148,7 +189,7 @@ a {
     text-align: center;
 }
 
-// Styles for the forms, to make them look nice
+/* Forms Styling */
 .simple-form {
     max-width: 500px;
     margin-left: auto;
@@ -157,6 +198,7 @@ a {
 
 .form-group {
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .form-input, .form-textarea {
@@ -168,4 +210,6 @@ a {
 
 .form-title {
     margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
