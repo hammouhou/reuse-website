@@ -7,27 +7,165 @@
 /* these are  shortcuts for my colors from the mood board */
 :root {
     --background-color: #F5F1EB;
-    --primary-color: #4CAF50;
+    --primary-green-color: #4CAF50;
     --text-color: #333333;
-    --button-color: #3B9AE1;
-    --first-font: 'Playpen Sans', cursive; // Cuz who can remmber the spelling of these names 
-    --second-font: 'Nanum Pen Script', cursive;
+    --button-blue-color: #3B9AE1;
+    --playpen-sans-font: 'Playpen Sans', cursive; // fixed the spelling of the font!
+    --nanum-pen-script-font: 'Nanum Pen Script', cursive;
 }
 
-/* this will apply to the whole page! */
+// this will apply to the whole page
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: var(--playpen-font);
-    font-weight: 400; /* this is for regular paragraph text */
+    font-family: var(--playpen-sans-font);
+    font-weight: 400; // this is for regular paragraph text
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600; /* this is for bold headings */
+    font-weight: 600; // this is for bold headings
 }
 
-/* making links look nice */
 a {
-    color: var(--primary-color);
+    color: var(--primary-green-color);
     text-decoration: none;
+}
+
+// Style for the header section
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo-image {
+    height: 50px;
+}
+
+.navigation-link {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+}
+
+// Styling the big hero section on the homepage
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Home-Page-Hero-Smiling-Delivery-Man-Image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-section h1 {
+    font-family: var(--nanum-pen-script-font);
+    font-size: 4rem;
+}
+
+// General page and section styling
+.main-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-navigation {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.content-image {
+    width: 100%;
+}
+
+// Style for our buttons
+.button-primary, .button-secondary {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: var(--button-blue-color);
+}
+
+.button-secondary {
+    background-color: var(--primary-green-color);
+}
+
+// Styling for the our partners page
+.partner-listing {
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.partner-name-link {
+    color: var(--primary-green-color);
+}
+
+.centered-content {
+    text-align: center;
+}
+
+// Styling the footer
+.site-footer {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    background-color: #e9e4db;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.footer-column h5 {
+    font-weight: 600;
+}
+
+.footer-links-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links-list a {
+    color: var(--text-color);
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+// Styles for the forms, to make them look nice
+.simple-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-title {
+    margin-top: 2rem;
 }
