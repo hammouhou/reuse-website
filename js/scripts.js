@@ -114,4 +114,33 @@ document.addEventListener('DOMContentLoaded', function() {
             pickupForm.reset(); // this clears the form after it's sent
         });
     }
+
+    // Validation for the Partner Sign Up page
+    const partnerForm = document.getElementById('partner-form');
+    if (partnerForm) {
+        partnerForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // prevent the form from submitting
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const businessEmail = document.getElementById('businessEmail').value.trim();
+            const organizationName = document.getElementById('organizationName').value.trim();
+            
+            // a simple regex for email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (fullName === '' || businessEmail === '' || organizationName === '') {
+                alert('Please fill out all required fields: Full Name, Business Email, and Organization Name.');
+                return;
+            }
+
+            if (!emailRegex.test(businessEmail)) {
+                alert('Please enter a valid business email address.');
+                return;
+            }
+
+            // If all checks pass, show a success message
+            alert('Thank you! Your partner sign-up request has been submitted.');
+            partnerForm.reset(); // clear the form
+        });
+    }
 });
