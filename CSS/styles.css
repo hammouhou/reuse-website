@@ -1,7 +1,7 @@
 
-// Stylesheet for the Reuse Project
-// google fonts and colors go here 
-// lets get those cool fonts from google 
+/* Stylesheet for the Reuse Project
+/* google fonts and colors go here 
+ lets get those cool fonts from google */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap');
 
 /* these are  shortcuts for my colors from the mood board */
@@ -14,7 +14,7 @@
     --nanum-pen-script-font: 'Nanum Pen Script', cursive;
 }
 
-// this will apply to the whole page
+/* this will apply to the whole page */
 body {
     background-color: var(--background-color);
     color: var(--text-color);

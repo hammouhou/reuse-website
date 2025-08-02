@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     // find the div where we want to put the team members
-    const teamContainer = document.getElementByID('team-container');
+    const teamContainer = document.getElementById('team-container');
 
     // we only want to run this code if we are on the about us page (where the container exists)
     if (teamContainer) {
@@ -83,4 +83,33 @@ document.addEventListener('DOMContentLoaded', function() {
         teamContainer.innerHTML = teamHTML;
     }
 
-});
+
+    // this is the validation required by the project (for Schedule a Pick Up page)
+    const pickupForm = document.getElementById('pickup-form');
+    if (pickupForm) {
+        pickupForm.addEventListener('submit', function(event) {
+            // this stops the form from trying to submit to a server
+            event.preventDefault();
+
+            // get the values from the form fields
+            const fullName = document.getElementById('fullName').value;
+            const description = document.getElementById('description').value;
+            const estimatedValue = document.getElementById('value').value;
+
+            // check if important fields are empty
+            if (fullName === '' || description === '') {
+                alert('Please fill out your name and a description of the donation.');
+                return; // Stop the function
+            }
+
+            // check if the estimated value is a number, this might be used in the future to implement an auto caculator of pick up worthy donations
+            if (isNaN(estimatedValue) || estimatedValue === '') {
+                alert('Please enter a valid number for the estimated value.');
+                return; // Stop the function
+            }
+
+            // if everything is okay, show a success message
+            alert('Thank you! Your pickup request has been submitted.');
+            pickupForm.reset(); // this clears the form after it's sent
+        });
+    }
