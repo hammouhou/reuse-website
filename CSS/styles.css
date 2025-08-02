@@ -1,3 +1,33 @@
 
-    // Stylesheet for the Reuse Project
-    // Should add the google fonts and colors here 
+// Stylesheet for the Reuse Project
+// google fonts and colors go here 
+// lets get those cool fonts from google 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playpen+Sans:wght@400;600&display=swap');
+
+/* these are  shortcuts for my colors from the mood board */
+:root {
+    --background-color: #F5F1EB;
+    --primary-color: #4CAF50;
+    --text-color: #333333;
+    --button-color: #3B9AE1;
+    --first-font: 'Playpen Sans', cursive; // Cuz who can remmber the spelling of these names 
+    --second-font: 'Nanum Pen Script', cursive;
+}
+
+/* this will apply to the whole page! */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--playpen-font);
+    font-weight: 400; /* this is for regular paragraph text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* this is for bold headings */
+}
+
+/* making links look nice */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
