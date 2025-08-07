@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         teamContainer.innerHTML = teamHTML;
     }
 
-    // --- Unified Form Validation Function ---
+    // --- Form Validation Function ---
     // This one function will handle all our forms!
     function validateForm(formId, requiredFields) {
         const form = document.getElementById(formId);
@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         return; // Stop the function
                     }
                     
-                    // 2. NEW: Check for a valid email format
-                    // if the id of the input contains the word 'Email', we check it
-                    if (fieldId.toLowerCase().includes('email')) {
+                    // 2. Check for a valid email format
+                    // if the id of the input is email
+                    if (fieldId === 'email') {
                         // this is a simple pattern to check for something@something.something
                         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                         if (!emailPattern.test(fieldValue)) {
@@ -106,12 +106,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }
 
-                    // 3. NEW: Check for a valid phone number format
+                    // 3. Check for a valid phone number format
                     // if the id of the input is 'contactPhone', we check it
                     if (fieldId === 'contactPhone') {
-                        // this checks if the value is not a number or is less than 7 digits
-                        if (isNaN(fieldValue) || fieldValue.length < 7) {
-                           alert('Please enter a valid phone number with at least 7 digits.');
+                        // this checks if the value is not a number or is less than 10 digits
+                        if (isNaN(fieldValue) || fieldValue.length < 10) {
+                           alert('Please enter a valid phone number with at least 10 digits.');
                            return; // Stop the function
                         }
                     }
@@ -124,14 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Using the Unified Function for Each Form ---
+    // --- Using the Function for Each Form ---
     // Now we just call our function for each form on the site.
     
     // 1. Validate the Schedule a Pick Up form
     validateForm('pickup-form', ['fullName', 'email', 'description', 'value']);
 
     // 2. Validate the Partner Sign Up form
-    validateForm('partner-form', ['fullName', 'businessEmail', 'organizationName']);
+    validateForm('partner-form', ['fullName', 'Email', 'organizationName']);
 
     // 3. Validate the Contact Us form
     validateForm('contact-form', ['contactName', 'contactEmail', 'contactPhone', 'contactMessage']);
